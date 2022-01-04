@@ -60,5 +60,16 @@ Use one wire to share the ground, namely GND to GND.
 
 Use another wire to connect the pin that will output the PWM signal from the board to the signal receiving end of the buzzer or loudspeaker .
 
-## 
-
+## Demo program
+### Ordinary method
+```python
+from machine import Pin,PWM
+import time
+import buzzer
+Musical_Score=[(1/2,"L1"),(1/4,"L2"),(1/2,"L3"),(1,"L4"),(2,"L5"),
+               (1/2,"1#"),(1/4,"2#"),(1/2,"3"),(1,"4#"),(2,"5#"),
+               (1/2,"H1#"),(1/4,"H2#"),(1/2,"H3"),(1,"H4#"),(2,"H5#"),(1,"0")]
+pwm=PWM(Pin(1,Pin.OUT)
+buzzer=buzzer.Buzzer(pwm))
+buzzer.play(score=Musical_Score,tempo=60,freq_multiple=1,output=0)
+```
