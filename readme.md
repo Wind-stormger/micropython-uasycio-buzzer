@@ -6,7 +6,9 @@ The method of composing music is more in line with the editing method of numbere
 
 Composers can compose music in python code in this way. 
 
-Currently only tested ESP32S2 chip.After confirming the relevant documents, it has been determined that it should be compatible with all chips launched by Espressif that already support the micropython firmware , such as ESP8266,ESP32,ESP32S2,ESP32S3,ESP32C3.
+Currently only tested ESP32S2 chip.
+
+After confirming the relevant documents, it has been determined that it should be compatible with all chips launched by Espressif that already support the micropython firmware , such as ESP8266,ESP32,ESP32S2,ESP32S3,ESP32C3.
 
 # How to edit your own musical score
 
