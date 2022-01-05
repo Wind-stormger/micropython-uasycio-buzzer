@@ -129,7 +129,7 @@ For general applications, please refer to the code in the example.
 
 2. Create a tasks list ,  `tasks=[]`
 
-3. Add async tasks to the list , such as `tasks=[asyncio.create_task())]` or `tasks.append(asyncio.create_task()`
+3. Add async tasks to the list , such as `tasks=[asyncio.create_task()]` or `tasks.append(asyncio.create_task())`
 
 4. Use the `gather` method to gather all tasks, `await asyncio.gather(*tasks)`
 
