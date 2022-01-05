@@ -106,8 +106,8 @@ Musical_Score2=[(1/2,"1#"),(1/4,"2#"),(1/2,"3"),(1,"4#"),(2,"5#")]
 async def main():
     pwm1=PWM(Pin(1,Pin.OUT))
     pwm2=PWM(Pin(2,Pin.OUT))
-    buzzer1=Buzzer(pwm1)
-    buzzer2=Buzzer(pwm2)
+    buzzer1=buzzer.Buzzer(pwm1)
+    buzzer2=buzzer.Buzzer(pwm2)
     tasks=[asyncio.create_task(
         buzzer1.async_play(Musical_Score1,tempo=60,freq_multiple=1,output=1,channel=0))]
     tasks.append(asyncio.create_task(
