@@ -27,6 +27,6 @@ Weight_of_the_World=[
     ]
 
 buzzer=buzzer.Buzzer(PWM(Pin(1,Pin.OUT)))
-buzzer.play(Weight_of_the_World,tempo=30,freq_multiple=1,output=0)
+buzzer.play(Weight_of_the_World,tempo=90,freq_multiple=1,output=0)
 
 
