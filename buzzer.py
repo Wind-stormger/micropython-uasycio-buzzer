@@ -64,27 +64,3 @@ class Buzzer:
             await asyncio.sleep_ms(1)
         self.pwm.duty(0)
 
-if __name__ == '__main__':
-    Music_Score1=[(1/4,"3"),(1/4,"3"),(1/4,"4"),(1/4,"5"),
-                  (1/4,"5"),(1/4,"4"),(1/4,"3"),(1/4,"2"),
-                  (1/4,"1"),(1/4,"1"),(1/4,"2"),(1/4,"3"),
-                  (1/4,"3"),(1/4,"2"),(1/4,"2")]
-    Music_Score2=[(1,"1"),(1,"2"),(1,"3"),(1,"4"),(1,"5"),]
-    Music_Score3=[(1,"1"),(1,"1"),(1,"1"),(1,"1"),(1,"1"),]
-
-#     buzzer=Buzzer(PWM(Pin(1,Pin.OUT)))
-#     buzzer.play(Music_Score1,tempo=30,freq_multiple=1,output=0)
-
-    async def main():
-        pwm1=PWM(Pin(1,Pin.OUT))
-        pwm2=PWM(Pin(2,Pin.OUT))
-        buzzer1=Buzzer(pwm1)
-        buzzer2=Buzzer(pwm2)
-        tasks=[asyncio.create_task(
-            buzzer1.async_play(Music_Score1,tempo=60,freq_multiple=1,output=1,channel=0))]
-        tasks.append(asyncio.create_task(
-            buzzer2.async_play(Music_Score2,tempo=60,freq_multiple=1,output=1,channel=1)))
-        await asyncio.gather(*tasks)
-    
-    asyncio.run(main())
-
