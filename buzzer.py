@@ -21,7 +21,7 @@ class Buzzer:
             self.pwm=PWM(Pin(0,Pin.OUT))
         self.pwm.duty(0)
 
-    # Ordinary method of playing music score
+    # Ordinary method
     def play(self,score,tempo=60,freq_multiple=1,output=0):
         One_Beat_Time=1000*60/tempo
         if output==1:
@@ -42,7 +42,7 @@ class Buzzer:
             time.sleep_ms(1)
         self.pwm.duty(0)
 
-    # Async method of playing music score
+    # Async method
     async def async_play(self,score,tempo=60,freq_multiple=1,output=0,channel=0):
         One_Beat_Time=1000*60/tempo
         if output==1:
