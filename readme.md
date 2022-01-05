@@ -1,4 +1,4 @@
-# what is it
+# What is it
 
 This project is a simple micropython pwm buzzer driver, which supports the application of uasycio to achieve multi-channel music playback, or multi-channels merged into one to achieve chord sound playback.
 
@@ -50,7 +50,7 @@ More knowledge about numbered musical notation please refer to [Wikipedia](https
 
 ## Necessary software and hardware conditions
 
-A board with micropython firmware already. 
+A board with micropython firmware already. (Currently only tested ESP32)
 
 Upload the `buzzer.py` file to the board.
 
@@ -73,3 +73,4 @@ pwm=PWM(Pin(1,Pin.OUT)
 buzzer=buzzer.Buzzer(pwm))
 buzzer.play(score=Musical_Score,tempo=60,freq_multiple=1,output=0)
 ```
+
