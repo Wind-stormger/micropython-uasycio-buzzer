@@ -81,13 +81,13 @@ import buzzer
 Musical_Score=[(1/2,"L1"),(1/4,"L2"),(1/2,"L3"),(1,"L4"),(2,"L5"),
                (1/2,"1#"),(1/4,"2#"),(1/2,"3"),(1,"4#"),(2,"5#"),
                (1/2,"H1#"),(1/4,"H2#"),(1/2,"H3"),(1,"H4#"),(2,"H5#"),(1,"0")]
-pwm=PWM(Pin(1,Pin.OUT))
+pwm=PWM(Pin(1))
 buzzer=buzzer.Buzzer(pwm)
 buzzer.play(score=Musical_Score,tempo=60,freq_multiple=1,output=0)
 ```
 
 - `buzzer.Buzzer(pwm)`
-    - `pwm`: A necessary PWM channel, such as `machine.PWM(Pin(1,Pin.OUT))`.
+    - `pwm`: A necessary PWM channel, such as `machine.PWM(Pin(1))`.
 
 - `play(score,tempo,freq_multiple,output)`
     - `score`: A list include musical score , it is necessary.
@@ -104,8 +104,8 @@ import buzzer
 Musical_Score1=[(1/2,"L1"),(1/4,"L2"),(1/2,"L3"),(1,"L4"),(2,"L5")]
 Musical_Score2=[(1/2,"1#"),(1/4,"2#"),(1/2,"3"),(1,"4#"),(2,"5#")]
 async def main():
-    pwm1=PWM(Pin(1,Pin.OUT))
-    pwm2=PWM(Pin(2,Pin.OUT))
+    pwm1=PWM(Pin(1))
+    pwm2=PWM(Pin(2))
     buzzer1=buzzer.Buzzer(pwm1)
     buzzer2=buzzer.Buzzer(pwm2)
     tasks=[asyncio.create_task(

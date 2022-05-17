@@ -18,7 +18,7 @@ class Buzzer:
     def __init__(self,pwm=None):
         self.pwm=pwm
         if self.pwm==None:
-            self.pwm=PWM(Pin(0,Pin.OUT))
+            self.pwm=PWM(Pin(0))
         self.pwm.duty(0)
 
     # Ordinary method
