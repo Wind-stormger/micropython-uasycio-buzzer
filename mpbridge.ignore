@@ -1,0 +1,8 @@
+.idea/
+.git/
+.gitignore
+.gitattributes
+LICENSE
+README.md
+package.json
+mpbridge.ignore
